@@ -10,7 +10,7 @@ import {
     PostMessageBusSink
 } from './PostMessageBus';
 
-import {Subscriber} from 'rxjs';
+import {Subscriber, Subscription} from 'rxjs';
 
 import {IPostMessageBridge} from './IPostMessageBridge';
 import {IPostMessage} from './IPostMessage';
@@ -92,9 +92,9 @@ export class PostMessageBridgeImpl implements IPostMessageBridge {
      * @override
      */
     public addListener(bridgeName: string, listener: Function): IPostMessageBridge {
-        const subscriber: Subscriber<any> = this._sources.get(bridgeName).subscribe(listener);
+        const subscriber: Subscription = this._sources.get(bridgeName).subscribe(listener);
 
-        let subscribers: Map<Function, Subscriber<any>> = this._subscribers.get(bridgeName);
+        let subscribers: Map<Function, Subscription> = this._subscribers.get(bridgeName);
         if (!subscribers) {
             this._subscribers.set(bridgeName, subscribers = new Map<Function, Subscriber<any>>());
         }

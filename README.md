@@ -1,5 +1,7 @@
 # ngx-post-message
 
+[[...Unofficial Angular 9 compatible port of the original ngx-post-message module...]]
+
 An implementation of the cross-origin communication via postMessage at Angular2 [4.3.1 compatible].
 
 ## Description
