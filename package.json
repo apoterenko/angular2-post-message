@@ -1,11 +1,12 @@
 {
   "name": "ngx-post-message",
-  "version": "1.5.3",
+  "version": "1.5.9",
   "license": "MIT",
   "keywords": [
     "angular",
     "angular2",
     "angular4",
+    "angular9",
     "post",
     "post-message",
     "postMessage",
@@ -13,28 +14,31 @@
     "angular-post-message",
     "angular2-post-message",
     "angular4-post-message",
+    "angular9-post-message",
     "ng2-post-message",
     "ng4-post-message",
+    "ng9-post-message",
     "ng-post-message"
   ],
   "author": "Alex Poter <a.poterenko@gmail.com>",
   "scripts": {
     "clean": "npm cache clean",
-    "ngc-build": "node_modules/.bin/ngc -p tsconfig.json",
+    "ngc-build": "ngc -p tsconfig.json",
     "deploy": "npm install && npm run ngc-build && npm publish ./"
   },
   "peerDependencies": {
-    "@angular/core": ">=5.0.0",
-    "rxjs": ">=5.0.0"
+    "@angular/core": "^9.1.11",
+    "rxjs": "^6.6.0"
   },
   "devDependencies": {
-    "@angular/compiler": "5.0.0-rc.3",
-    "@angular/compiler-cli": "5.0.0-rc.3",
-    "@angular/core": "5.0.0-rc.3",
-    "@types/node": "6.0.46",
-    "rxjs": "^5.5.0",
-    "typescript": ">=2.4.2 <2.5",
-    "zone.js": "^0.8.18"
+    "@angular/compiler": "^9.1.11",
+    "@angular/cli": "^9.1.10",
+    "@angular/compiler-cli": "^9.1.11",
+    "@angular/core": "^9.1.11",
+    "@types/node": "^12.11.1",
+    "rxjs": "^6.6.0",
+    "typescript": "~3.8.3",
+    "zone.js": "~0.10.2"
   },
   "repository": {
     "type": "git",
@@ -47,7 +51,7 @@
   "typings": "ngx-post-message.d.ts",
   "main": "ngx-post-message.js",
   "engines": {
-    "node": ">= 4.2.1",
+    "node": ">= 10.13.0",
     "npm": ">= 3"
   }
 }
